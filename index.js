@@ -1,4 +1,4 @@
 import { testFunc } from "./lib/Stack";
-import { TestDom } from "./lib/testDom";
+import { TestDom, StyledComponent } from "./lib/testDom";
 
-export { testFunc, TestDom };
+export { testFunc, TestDom, StyledComponent };

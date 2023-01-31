@@ -1,14 +1,18 @@
-import { testFunc, TestDom } from "canvas-npm";
+import React from "react";
+import { TestDom, StyledComponent } from "canvas-npm";
+import styled from "styled-components";
 
-function App() {
-  testFunc("1");
+const Styled = styled.div`
+  color: red;
+`;
 
+const App = React.memo(() => {
   return (
-    <div>
-      test
+    <Styled>
       <TestDom />
-    </div>
+      <StyledComponent>123</StyledComponent>
+    </Styled>
   );
-}
+});
 
 export default App;

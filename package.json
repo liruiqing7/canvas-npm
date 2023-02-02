@@ -28,7 +28,7 @@
     "babel-plugin-styled-components": "^2.0.7",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.6"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.20.13",

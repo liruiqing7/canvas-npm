@@ -37,7 +37,6 @@
     ]
   },
   "devDependencies": {
-    "canvas-npm": "file:..",
     "clean-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.75.0",

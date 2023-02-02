@@ -1,5 +1,5 @@
 import React from "react";
-import { TestDom, StyledComponent } from "canvas-npm";
+import { TestDom, StyledComponent } from "canvas-pixel-react";
 import styled from "styled-components";
 
 const Styled = styled.div`

@@ -6,7 +6,7 @@ const StyledComponent = styled.div`
 `;
 
 const TestDom = memo(() => {
-  return <div>1223</div>;
+  return <div>122345</div>;
 });
 
 export { TestDom, StyledComponent };

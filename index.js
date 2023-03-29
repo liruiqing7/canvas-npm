@@ -1,4 +1,4 @@
-import { testFunc } from "./lib/Stack";
-import { TestDom, StyledComponent } from "./lib/testDom";
+import { testFunc } from "./src/util";
+import { TestDom, StyledComponent } from "./dist/bundle";
 
 export { testFunc, TestDom, StyledComponent };

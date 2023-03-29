@@ -1,12 +1,15 @@
-import { memo } from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 
 const StyledComponent = styled.div`
   color: red;
+  margin-top: 100px;
 `;
 
 const TestDom = memo(() => {
-  return <div>122345</div>;
+  const name: string = "liruiqing";
+
+  return <div>{name}</div>;
 });
 
 export { TestDom, StyledComponent };

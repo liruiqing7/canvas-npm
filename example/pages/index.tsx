@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import styled from "styled-components";
 import { TestDom, StyledComponent } from "canvas-pixel-react";
 
@@ -10,12 +11,23 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-export default function Home() {
+export default function Home({ data }: { data: any }) {
+  const { name } = data;
   return (
     <StyledBox>
-      <Title>My page</Title>
+      <Title>My page{name}</Title>
       <TestDom />
       <StyledComponent>这里</StyledComponent>
     </StyledBox>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      data: {
+        name: "123",
+      },
+    },
+  };
+};

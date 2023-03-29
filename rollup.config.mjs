@@ -3,6 +3,8 @@ import typescript from "rollup-plugin-typescript2";
 import commonjs from "rollup-plugin-commonjs";
 import { babel } from "@rollup/plugin-babel";
 import serve from "rollup-plugin-serve";
+import livereload from "rollup-plugin-livereload";
+import terser from "@rollup/plugin-terser";
 
 const overrides = {
   compilerOptions: {
@@ -17,11 +19,15 @@ const overrides = {
 };
 
 export default {
-  input: "src/index.tsx",
+  input: "src/index.tsx", // 入口文件地址
   output: {
-    file: "dist/bundle.js",
-    format: "esm",
-    sourcemap: true,
+    file: "dist/bundle.js", // 输出文件
+    format: "esm", // 5种输出格式: amd / es6 / iife / umd / cjs
+    sourcemap: true, // 生成bundle.map.js 方便调试
+    globals: {
+      window: "window",
+      self: "window",
+    },
   },
   plugins: [
     typescript({
@@ -34,5 +40,9 @@ export default {
     }),
     commonjs(),
     babel({ babelHelpers: "bundled" }),
+    terser({
+      maxWorkers: 4,
+    }),
+    // livereload(),
   ],
 };

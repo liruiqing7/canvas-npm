@@ -1,4 +1,3 @@
-import { testFunc } from "./src/util";
-import { TestDom, StyledComponent } from "./dist/bundle";
+import PixelCanvas from "./dist/bundle";
 
-export { testFunc, TestDom, StyledComponent };
+export default PixelCanvas;

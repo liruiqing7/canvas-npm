@@ -1,15 +1,15 @@
 import React, { memo } from "react";
-import styled from "styled-components";
+import Layout from "./component/layout";
+import { CanvasModule } from "./component/canvas";
 
-const StyledComponent = styled.div`
-  color: red;
-  margin-top: 100px;
-`;
+const PixelCanvas = memo(
+  ({ needConfirm, canvasState }: PixelCanvas.CanvasProps) => {
+    return (
+      <Layout>
+        <CanvasModule needConfirm={needConfirm} canvasState={canvasState} />
+      </Layout>
+    );
+  }
+);
 
-const TestDom = memo(() => {
-  const name: string = "liruiqing";
-
-  return <div>{name}</div>;
-});
-
-export { TestDom, StyledComponent };
+export default PixelCanvas;

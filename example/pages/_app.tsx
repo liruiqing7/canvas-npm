@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -26,6 +27,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <Head>
+          <title>像素画板</title>
+          <link rel="shortcut icon" href="/icon.png" />
+        </Head>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
